@@ -1,0 +1,37 @@
+# Ansible Role - links
+
+Configure NAT rules on a EVX updating the following files:
+
+/etc/firewall.d/customer_nat
+
+Currently supported:
+- NA
+
+Add this as a role to an Ansible playbook `roles` directory, then configure the playbook to use it:
+
+Example inventory:
+```yaml
+---
+all:
+  hosts:
+    example:
+      # [...]
+
+```
+
+Example playbook:
+```yaml
+---
+- name: 'Example Playbook - natrule'
+  hosts: 'all'
+
+  roles:
+    - role: 'links'
+
+# or
+
+  tasks:
+    - name: 'Include role - natrule'
+      include_role:
+        name: 'links'
+```

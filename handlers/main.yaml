@@ -1,0 +1,4 @@
+---
+- name: 'accesslist:restart'
+  ansible.builtin.command:
+    cmd: '/usr/ev/scripts.d/hooks/nexus-post-up/10_acl_up restart'

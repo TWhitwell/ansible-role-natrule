@@ -1,0 +1,5 @@
+###
+# {{ ansible_managed }}
+###
+
+iptables -t nat -A "\${CHAIN}" -s 172.16.0.2 -j SNAT --to {{ nat_ip_addr }}

@@ -1,0 +1,9 @@
+---
+- name: 'natrule:config'
+  ansible.builtin.template:
+    src: 'etc/firewall.d/customer_nat.j2'
+    dest: '/etc/firewall.d/customer_nat'
+    owner: 'root'
+    group: 'root'
+    mode: '0640'
+  notify: 'accesslist:restart'
